@@ -1,0 +1,53 @@
+.home-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    .left-container {
+        display: flex;
+        flex-direction: column; /* Stack logo and text vertically */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        height: 100%; /* Take full height of the left container */
+        text-align: center;
+        background-color: #1E1E1E; /* Blue background color */
+    
+        img {
+            width: 120px; /* Smaller logo size */
+            height: auto;
+            margin-bottom: 10px; /* Space between logo and text */
+        }
+    
+        .tagline {
+            font-size: 0.9rem; /* Smaller font size for tagline */
+            color: #ffffff; /* Text color for dark background */
+            font-weight: 400; /* Normal weight */
+            margin: 0;
+        }
+        .logo-name {
+            font-size: 2rem; /* Make it prominent */
+            font-weight: bold; /* Bold font for impact */
+            color: #ffffff; /* White text for dark background */
+            margin: 0 0 10px; /* Add spacing below the name */
+        }
+        .cta-button {
+            margin-top: 20px; /* Space between text and button */
+            background-color: #ffffff; /* White background */
+            color: #333333; /* Dark text color */
+            border-radius: 30px; /* Round corners */
+            font-size: 1.25rem;
+            font-weight: bold;
+            padding: 15px 30px;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Smooth transition for hover effect */
+            
+            /* Hover effect */
+            &:hover {
+                background-color: #f1f1f1; /* Light grey on hover */
+                transform: scale(1.05); /* Slightly enlarge the button */
+            }
+    }
+    
+    
+}
+}
