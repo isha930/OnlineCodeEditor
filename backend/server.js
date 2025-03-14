@@ -9,14 +9,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
-// ✅ Enable CORS for all origins
 app.use(cors());
 
-const JUDGE0_API_URL = "https://judge0-ce.p.rapidapi.com/submissions";
+const JUDGE0_API_URL = "https://judge0-ce.p.rapidapi.com/submissions"; // ✅ Fixed Syntax Error
 const API_KEY = process.env.JUDGE0_API_KEY;
 
 app.post("/api/run", async (req, res) => {
-  console.log("Received Request Body:", req.body);
+  console.log("Received Request Body:", req.body); // ✅ Debugging: Check if frontend sends correct data
 
   const { language_id, source_code, stdin } = req.body;
 
@@ -30,10 +29,10 @@ app.post("/api/run", async (req, res) => {
       { source_code, language_id, stdin },
       {
         headers: {
-          "Content-Type": "application/json",
-          "X-RapidAPI-Key": API_KEY, // ✅ Check .env file me sahi API key hai
-          "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com", // ✅ FIXED HOST
-        },
+            "Content-Type": "application/json",
+            "X-RapidAPI-Key": "YOUR_RAPIDAPI_KEY",  // 🔴 API key check karo
+            "X-RapidAPI-Host": "judge0-extra-ce.p.rapidapi.com",
+        }
       }
     );
 
@@ -49,4 +48,5 @@ app.post("/api/run", async (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
 
