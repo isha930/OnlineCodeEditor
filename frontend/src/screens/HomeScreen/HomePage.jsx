@@ -1,7 +1,7 @@
 import React from 'react'
 import "./index.scss"
 import Right from './RC/Right'
-import Modal from '../../Providers/Modals/modal'
+import Modal from '../../Providers/Modals/Modal'
 import { useContext } from 'react'
 import { ModalConstants, ModalContext } from '../../Providers/ModalProvider'
 
