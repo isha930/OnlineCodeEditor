@@ -9,6 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
+// ✅ Enable CORS for all origins
 app.use(cors());
 
 const JUDGE0_API_URL = "https://judge0-ce.p.rapidapi.com/submissions";
@@ -30,7 +31,7 @@ app.post("/api/run", async (req, res) => {
       {
         headers: {
           "Content-Type": "application/json",
-          "X-RapidAPI-Key": API_KEY,  // ✅ Check .env file me sahi API key hai
+          "X-RapidAPI-Key": API_KEY, // ✅ Check .env file me sahi API key hai
           "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com", // ✅ FIXED HOST
         },
       }
@@ -48,3 +49,4 @@ app.post("/api/run", async (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
