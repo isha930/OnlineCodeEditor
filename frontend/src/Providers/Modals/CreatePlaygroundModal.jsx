@@ -25,7 +25,7 @@ function CreatePlaygroundModal() {
   return (
     <Dialog visible onHide={closeModal} header="Create New Playground">
       <div className="modal-container">
-        <h2>Create New Playground</h2>
+     
         <form onSubmit={OnSubmitModal}>
           <label htmlFor="folderName">Folder Name:</label>
           <input type="text" id="folderName" name="folderName" />
