@@ -22,34 +22,36 @@ function CreatePlaygroundModal() {
     closeModal();
   };
 
-  return (
+   return (
     <Dialog visible onHide={closeModal} header="Create New Playground">
       <div className="modal-container">
-     
         <form onSubmit={OnSubmitModal}>
-          <label htmlFor="folderName">Folder Name:</label>
-          <input type="text" id="folderName" name="folderName" />
+          <div className="field">
+            <label htmlFor="folderName">Folder Name:</label>
+            <input type="text" id="folderName" name="folderName" />
+          </div>
 
-          <label htmlFor="cardName">Card Name:</label>
-          <input type="text" id="cardName" name="cardName" />
+          <div className="field">
+            <label htmlFor="cardName">Card Name:</label>
+            <input type="text" id="cardName" name="cardName" />
+          </div>
 
-          {/* ✅ Add Language Select */}
-          <label htmlFor="language">Language:</label>
-          <select id="language" name="language">
-            <option value="java">Java</option>
-            <option value="cpp">C++</option>
-            <option value="javascript">JavaScript</option>
-            <option value="python">Python</option>
-            <option value="c">C</option>
-          </select>
+          <div className="field">
+            <label htmlFor="language">Language:</label>
+            <select id="language" name="language">
+              <option value="java">Java</option>
+              <option value="cpp">C++</option>
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+              <option value="c">C</option>
+            </select>
+          </div>
 
-          <button type="submit" className="p-button">
-            Create
-          </button>
+          <button type="submit" className="p-button">Create</button>
         </form>
       </div>
     </Dialog>
   );
-}
+};
 
 export default CreatePlaygroundModal;
