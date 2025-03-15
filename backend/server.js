@@ -13,6 +13,10 @@ app.use(cors());
 
 const JUDGE0_API_URL = "https://judge0-ce.p.rapidapi.com/submissions"; // ✅ Fixed Syntax Error
 const API_KEY = process.env.JUDGE0_API_KEY;
+app.get("/", (req, res) => {
+  res.send("🚀 Code Execution API is running!");
+});
+
 
 app.post("/api/run", async (req, res) => {
   console.log("Received Request Body:", req.body); // ✅ Debugging: Check if frontend sends correct data
