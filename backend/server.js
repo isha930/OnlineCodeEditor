@@ -35,7 +35,7 @@ app.post("/api/run", async (req, res) => {
         headers: {
             "Content-Type": "application/json",
             "X-RapidAPI-Key": API_KEY,  // 🔴 API key check karo
-            "X-RapidAPI-Host": "judge0-extra-ce.p.rapidapi.com",
+            "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com",
         }
       }
     );
